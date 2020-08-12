@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Negociações</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    
+</head>
+<body class="container">
+    
+    <h1 class="text-center">Content Hub Facens</h1>
+    
+    <form class="form" onsubmit="paginasController.adiciona(event)">
+        
+        <div class="form-group">
+            <label for="data">Nome da Página</label>
+            <input type="text" id="pageName" class="form-control" required autofocus/>        
+        </div>    
+        
+        <button class="btn btn-primary" type="submit">Adicionar</button>
+    </form>
+
+    <br>
+    <br>
+    
+    <div id="paginasView"></div>
+
+    <script src="js/app/models/Pagina.js"></script>
+    <script src="js/app/controllers/PaginasController.js"></script>
+    <script src="js/app/models/ListaPaginas.js"></script>
+    <script src="js/app/views/PaginasView.js"></script>
+    <script>
+        let paginasController = new PaginasController();
+    </script>
+</body>
+</html>
